@@ -38,8 +38,8 @@ void Ball::reboundBottomOrTop()
 
 void Ball::reboundSides()
 {
-	m_Position.y = 540;
-	m_Position.x = 500;
+	m_Position.y = (1080 / 2);
+	m_Position.x = (1920 / 2);
 	m_DirectionX = -m_DirectionX;
 }
 
@@ -49,6 +49,6 @@ void Ball::update(Time dt)
 	m_Position.y += m_DirectionY * m_Speed * dt.asSeconds();
 	m_Position.x += m_DirectionX * m_Speed * dt.asSeconds();
 
-	// Move the ball and the bat
+	// Move the ball
 	m_Shape.setPosition(m_Position);
 }
